@@ -1,0 +1,14 @@
+[req]
+req_extensions = v3_req
+distinguished_name = req_distinguished_name
+[req_distinguished_name]
+countryName                     = {{ ipdata.ansible_facts.country }}
+localityName                    = {{ ipdata.ansible_facts.region }}
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = {{ domain }}
+IP.1 = {{ ansible_eth1.ipv4.address }}
+IP.2 = {{ ansible_eth0.ipv4.address}}
