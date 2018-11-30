@@ -66,4 +66,11 @@ Click save configuration and then click "Restart Container" and refresh
 copy /root/rootCA.pem from the VM to docker and add the quay registry to your local docker
 add registry as trusted registry
 
-
+```bash
+sudo mkdir -p /etc/docker/certs.d/192.168.33.11.nip.io/
+sudo cp rootCA.pem /etc/docker/certs.d/192.168.33.11.nip.io/ca.crt
+sudo systemtl daemon-reload
+sudo systemctl restart docker.service
+# Verify login with super user credentials you created during setup
+sudo docker login 192.168.33.11.nip.io
+```
