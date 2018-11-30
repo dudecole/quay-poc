@@ -1,10 +1,9 @@
 
-# Pre Requicstics
+# Prerequisites
 
 - vagrant > 2.0.2
 - git
 - virtualbox
-
 
 # Documentation
 
