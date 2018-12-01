@@ -2,6 +2,7 @@
 # Prerequisites
 
 - vagrant > 2.0.2
+- ansible
 - git
 - virtualbox
 
