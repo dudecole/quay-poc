@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     quay.vm.network "forwarded_port", guest: 443, host: 443
     quay.vm.network "forwarded_port", guest: 8443, host: 8443
     quay.vm.network "forwarded_port", guest: 8080, host: 8080
-#    quay.vm.network "forwarded_port", guest: 5432, host: 5432
+    quay.vm.network "forwarded_port", guest: 5432, host: 5432
     config.vm.provider "virtualbox" do |quaym1|
         quaym1.memory = 4096
         quaym1.cpus = 2
