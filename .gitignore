@@ -1,2 +1,7 @@
 .vagrant
 ansible/playbook.retry
+
+
+# inventory file
+inventory
+inventory*
